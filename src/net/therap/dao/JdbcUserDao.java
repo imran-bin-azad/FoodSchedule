@@ -1,8 +1,8 @@
 package net.therap.dao;
 
 import net.therap.domain.User;
-import net.therap.util.DatabaseQueryExecutor;
-import net.therap.util.RowToObjectConverter;
+import net.therap.util.database.DatabaseQueryExecutor;
+import net.therap.util.database.RowToObjectConverter;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

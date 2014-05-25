@@ -5,7 +5,6 @@ package net.therap;
  * User: imran.azad
  * Date: 5/19/14
  * Time: 12:12 PM
- * To change this template use File | Settings | File Templates.
  */
 public class InvalidUserException extends Exception {
     public InvalidUserException() {
