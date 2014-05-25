@@ -2,6 +2,7 @@ package net.therap.controller;
 
 import net.therap.InvalidUserException;
 import net.therap.domain.User;
+import net.therap.listeners.ActiveUserCounter;
 import net.therap.service.UserService;
 import net.therap.util.DispatchHelper;
 
@@ -54,5 +55,6 @@ public class LoginController extends HttpServlet {
     private void startSessionForUser(HttpServletRequest req, User user) {
         HttpSession session = req.getSession();
         session.setAttribute("authenticatedUser", user);
+        System.out.println("Logged in Users: " + ActiveUserCounter.getActiveUsers());
     }
 }

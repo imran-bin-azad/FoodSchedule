@@ -1,5 +1,7 @@
 package net.therap.controller;
 
+import net.therap.listeners.ActiveUserCounter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,6 +22,7 @@ public class LogoutController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession(false);
         session.invalidate();
+        System.out.println("Logged in Users: " + ActiveUserCounter.getActiveUsers());
         resp.sendRedirect("/login");
     }
 }
